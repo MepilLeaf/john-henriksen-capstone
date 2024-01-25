@@ -30,6 +30,7 @@ Features
 - Take information from form and store it in database
 - A search function that will allow the user to search for recipes in the database
 - A way for the user to view current recipe they input and for other users to view recipes in the database
+- A way for the user to add tags to their recipe, those tags will help improve the search algorithm I make
 - Potentially a way for the user to export the recipe as a downloadable image
 
 ## Implementation
@@ -46,7 +47,6 @@ List technologies that will be used in your app, including any libraries to save
 - Express
 - Knex
 - MySQL
-- Potentially PostgreSQL (It has several features that makes implementing an effective search feature in a database easier)
 
 ### APIs
 
@@ -136,6 +136,6 @@ Your project will be marked based on what you committed to in the above document
 
 A way for the user to export a recipe: - An option to only export vs posting it to the database
 
-Tags for recipes in order to improve the searching feature
+A recipe author for each recipe
 
 A login system accompanied by a way to edit and delete previously made recipes
