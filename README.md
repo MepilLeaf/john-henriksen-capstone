@@ -76,10 +76,6 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ![Search Page](./mdAssets/Screenshot%202024-01-21%20195158.png)
 
-#### Recipe Editor Concept 1
-
-![Search Page](./mdAssets/Screenshot%202024-01-21%20195238.png)
-
 #### Recipe Editor Concept 2
 
 ![Search Page](./mdAssets/Screenshot%202024-01-21%20195158.png)
@@ -97,6 +93,10 @@ Landing: No data from other pages
 Create Recipes: has a form that will send data to the server to be added in a database
 
 Search Recipes: will get data from the database based on search terms
+
+#### Data Flow Chart
+
+![Landing Page](./mdAssets/Screenshot%202024-01-24%20203210.png)
 
 ### Endpoints
 
