@@ -1,0 +1,8 @@
+@use "./typography.scss" as *;
+@use "./mixins.scss" as *;
+@use "./typography.scss" as *;
+@use "./variable.scss" as *;
+@forward "./typography.scss";
+@forward "./mixins.scss";
+@forward "./typography.scss";
+@forward "./variable.scss";

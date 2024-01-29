@@ -78,7 +78,7 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 #### Recipe Editor Concept 2
 
-![Search Page](./mdAssets/Screenshot%202024-01-21%20195158.png)
+![Search Page](./mdAssets/Screenshot%202024-01-21%20195238.png)
 
 #### Landing Page
 
