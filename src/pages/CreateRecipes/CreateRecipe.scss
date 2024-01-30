@@ -1,0 +1,60 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.create-recipes-page {
+  background-color: $off-white;
+  height: 100%;
+  width: 100vw;
+  @include flex(column, flex-start, center);
+  padding: 5rem 0;
+  border: 1rem solid $light-red;
+}
+
+.recipe-form {
+  border: 0.5rem solid $light-red;
+  border-radius: 1.25rem;
+  width: 60vw;
+  color: $dark-red;
+  padding: 5rem 10rem;
+  @include box-shadow;
+  @include flex(column);
+
+  &__title-input {
+    resize: none;
+    outline: none;
+    border: 0.3rem solid $light-red;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    background-color: $off-white;
+    color: $dark-red;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    @include box-shadow;
+  }
+
+  &__ingredients-title,
+  &__steps-title {
+    align-self: flex-start;
+    font-size: 3rem;
+    margin: 6rem 0 0;
+    border-bottom: 0.3rem solid $dark-red;
+  }
+
+  &__ingredients-input,
+  &__steps-input {
+    resize: none;
+    outline: none;
+    border: 0.3rem solid $light-red;
+    border-radius: 1.25rem;
+    padding: 1rem 1.5rem;
+    background-color: $off-white;
+    color: $dark-red;
+    font-weight: bold;
+    @include box-shadow;
+    align-self: flex-start;
+    margin-top: 1rem;
+    width: 40rem;
+    font-size: 2rem;
+    min-height: 10rem;
+  }
+}

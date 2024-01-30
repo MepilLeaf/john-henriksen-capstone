@@ -1,0 +1,26 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.button {
+  background-color: $dark-red;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  @include box-shadow;
+
+  &--blue {
+    background-color: $dark-blue;
+  }
+
+  &__inner-container {
+    background-color: $light-red;
+    border-radius: 1.25rem;
+    padding: 0.5rem 1rem;
+    color: $off-white;
+    font-weight: bold;
+    font-size: 1rem;
+    @include box-shadow;
+
+    &--blue {
+      background-color: $light-blue;
+    }
+  }
+}
