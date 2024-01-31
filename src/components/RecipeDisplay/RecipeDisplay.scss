@@ -1,0 +1,93 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.scroll-container {
+  width: 60vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.recipe-display {
+  background-color: $light-red;
+
+  border-radius: 1.25rem;
+  padding: 2rem 4rem;
+  @include flex(column);
+  overflow-y: scroll;
+
+  &--browser {
+    background-color: $light-blue;
+  }
+
+  &__back,
+  &__submit {
+    align-self: flex-start;
+    border: 0.2rem solid $dark-red;
+    background-color: $dark-red;
+    color: $off-white;
+    border-radius: 1.25rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    @include box-shadow;
+
+    &--browser {
+      border: 0.2rem solid $dark-blue;
+      background-color: $dark-blue;
+    }
+
+    &:hover {
+      border: 0.2rem solid $off-white;
+    }
+  }
+
+  &__submit {
+    align-self: center;
+  }
+
+  &__recipe {
+    margin: 2rem;
+    background-color: $off-white;
+    width: 90%;
+    border-radius: 1.25rem;
+    color: $dark-red;
+    @include flex(column);
+    padding: 2rem 5rem;
+    @include box-shadow;
+    border: 0.5rem solid $dark-red;
+
+    &--browser {
+      color: $dark-blue;
+    }
+  }
+
+  &__recipe-title {
+    margin: 0;
+    font-size: 5rem;
+  }
+
+  &__recipe-section-title,
+  &__recipe-section-content {
+    align-self: flex-start;
+  }
+
+  &__recipe-section-title,
+  &__recipe-tags-title {
+    margin: 3rem 0 0;
+    font-size: 3rem;
+  }
+
+  &__recipe-section-content,
+  &__recipe-tags {
+    margin: 1rem 0 0;
+  }
+
+  &__recipe-section-content {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &__recipe-tags {
+    font-size: 1.3rem;
+  }
+}

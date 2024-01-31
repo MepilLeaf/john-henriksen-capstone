@@ -1,0 +1,36 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.button {
+  background-color: $dark-red;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  @include box-shadow;
+  border: none;
+  animation-duration: 1s;
+
+  &:hover {
+    padding: 0;
+  }
+
+  &--blue {
+    background-color: $dark-blue;
+  }
+
+  &__inner-container {
+    background-color: $light-red;
+    border-radius: 1.25rem;
+    padding: 1rem 2rem;
+    color: $off-white;
+    font-weight: bold;
+    font-size: 1rem;
+    @include box-shadow;
+
+    &:hover {
+      padding: 1.5rem 2.5rem;
+    }
+
+    &--blue {
+      background-color: $light-blue;
+    }
+  }
+}
