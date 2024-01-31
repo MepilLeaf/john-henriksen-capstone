@@ -6,6 +6,11 @@
   padding: 0.5rem;
   @include box-shadow;
   border: none;
+  animation-duration: 1s;
+
+  &:hover {
+    padding: 0;
+  }
 
   &--blue {
     background-color: $dark-blue;
@@ -19,6 +24,10 @@
     font-weight: bold;
     font-size: 1rem;
     @include box-shadow;
+
+    &:hover {
+      padding: 1rem 1.5rem;
+    }
 
     &--blue {
       background-color: $light-blue;

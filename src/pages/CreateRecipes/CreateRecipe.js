@@ -3,6 +3,7 @@ import TextareaAutosize from "react-textarea-autosize";
 import Button from "../../components/Button/Button";
 import { useState } from "react";
 import axios from "axios";
+import RecipeDisplay from "../../components/RecipeDisplay/RecipeDisplay";
 
 const CreateRecipes = () => {
   const RECIPES_URL = `${process.env.REACT_APP_BASE_URL}/recipes`;
@@ -16,7 +17,12 @@ const CreateRecipes = () => {
 
   const [values, setValues] = useState(initialValues);
 
-  const [recipe, setRecipe] = useState(null);
+  const [recipe, setRecipe] = useState({
+    recipeTitle: "Recipe Title",
+    recipeIngredients: "Ingredients",
+    recipeContent: "content",
+    recipeTags: "tags",
+  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -91,6 +97,11 @@ const CreateRecipes = () => {
         </div>
         <Button type="submit" isBlue={false} content="content time" />
       </form>
+      {recipe && (
+        <div className="create-recipe-popup">
+          <RecipeDisplay isBrowser={false} recipeData={recipe} />
+        </div>
+      )}
     </main>
   );
   //for tags use a map with a ternary to either return a string or a span, may have to use items in a string literal
