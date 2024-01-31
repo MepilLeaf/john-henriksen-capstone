@@ -1,7 +1,7 @@
 import "./CreateRecipe.scss";
 import TextareaAutosize from "react-textarea-autosize";
 import Button from "../../components/Button/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import RecipeDisplay from "../../components/RecipeDisplay/RecipeDisplay";
 
@@ -17,12 +17,7 @@ const CreateRecipes = () => {
 
   const [values, setValues] = useState(initialValues);
 
-  const [recipe, setRecipe] = useState({
-    recipeTitle: "Recipe Title",
-    recipeIngredients: "Ingredients",
-    recipeContent: "content",
-    recipeTags: "tags",
-  });
+  const [recipe, setRecipe] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,11 +38,22 @@ const CreateRecipes = () => {
       recipeTags: values.tags,
     };
 
-    console.log(newRecipe);
+    setRecipe(newRecipe);
+  };
 
+  useEffect(() => {
+    if (recipe) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [recipe]);
+
+  const onSubmit = async () => {
     try {
-      const res = await axios.post(RECIPES_URL, newRecipe);
-      console.log(res);
+      await axios.post(RECIPES_URL, recipe);
+      setRecipe(null);
+      setValues(initialValues);
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +81,7 @@ const CreateRecipes = () => {
         <TextareaAutosize
           className="recipe-form__steps-input"
           placeholder="Steps"
-          name="steps"
+          name="content"
           onChange={handleInputChange}
           value={values.content}
         />
@@ -95,11 +101,18 @@ const CreateRecipes = () => {
             sweet, savory, 30 minutes, vegetarian
           </p>
         </div>
-        <Button type="submit" isBlue={false} content="content time" />
+        <Button type="submit" isBlue={false} content="Done" />
       </form>
       {recipe && (
         <div className="create-recipe-popup">
-          <RecipeDisplay isBrowser={false} recipeData={recipe} />
+          <RecipeDisplay
+            isBrowser={false}
+            recipeData={recipe}
+            onBack={() => {
+              setRecipe(null);
+            }}
+            onSubmit={onSubmit}
+          />
         </div>
       )}
     </main>

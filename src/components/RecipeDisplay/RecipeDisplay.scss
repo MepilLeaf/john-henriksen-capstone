@@ -1,11 +1,18 @@
 @use "../../styles/partials/globals.scss" as *;
 
+.scroll-container {
+  width: 60vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .recipe-display {
   background-color: $light-red;
-  width: 60vw;
+
   border-radius: 1.25rem;
   padding: 2rem 4rem;
   @include flex(column);
+  overflow-y: scroll;
 
   &--browser {
     background-color: $light-blue;
@@ -19,7 +26,8 @@
     color: $off-white;
     border-radius: 1.25rem;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
     @include box-shadow;
 
     &--browser {
@@ -54,7 +62,7 @@
 
   &__recipe-title {
     margin: 0;
-    font-size: 2rem;
+    font-size: 5rem;
   }
 
   &__recipe-section-title,
@@ -65,10 +73,21 @@
   &__recipe-section-title,
   &__recipe-tags-title {
     margin: 3rem 0 0;
+    font-size: 3rem;
   }
 
   &__recipe-section-content,
-  &__recipe-tags-content {
+  &__recipe-tags {
     margin: 1rem 0 0;
+  }
+
+  &__recipe-section-content {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &__recipe-tags {
+    font-size: 1.3rem;
   }
 }

@@ -19,14 +19,14 @@
   &__inner-container {
     background-color: $light-red;
     border-radius: 1.25rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     color: $off-white;
     font-weight: bold;
     font-size: 1rem;
     @include box-shadow;
 
     &:hover {
-      padding: 1rem 1.5rem;
+      padding: 1.5rem 2.5rem;
     }
 
     &--blue {
