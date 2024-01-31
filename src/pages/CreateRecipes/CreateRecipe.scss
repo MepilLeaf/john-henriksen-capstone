@@ -33,7 +33,8 @@
   }
 
   &__ingredients-title,
-  &__steps-title {
+  &__steps-title,
+  &__tags-title {
     align-self: flex-start;
     font-size: 3rem;
     margin: 6rem 0 0;
@@ -41,7 +42,8 @@
   }
 
   &__ingredients-input,
-  &__steps-input {
+  &__steps-input,
+  &__tags-input {
     resize: none;
     outline: none;
     border: 0.3rem solid $light-red;
@@ -56,5 +58,27 @@
     width: 40rem;
     font-size: 2rem;
     min-height: 10rem;
+  }
+
+  &__tags-title {
+    align-self: center;
+  }
+
+  &__tags-container {
+    background-color: $dark-red;
+    padding: 0.8rem;
+    border-radius: 1.25rem;
+    margin: 1rem 0;
+    @include box-shadow;
+  }
+
+  &__tags-input {
+    margin-top: 0;
+    border: 0.6rem solid $light-red;
+    font-size: 1.5rem;
+  }
+
+  &__tags-footnote {
+    color: $off-white;
   }
 }

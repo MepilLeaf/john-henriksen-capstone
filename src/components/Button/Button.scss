@@ -5,6 +5,7 @@
   border-radius: 1.25rem;
   padding: 0.5rem;
   @include box-shadow;
+  border: none;
 
   &--blue {
     background-color: $dark-blue;

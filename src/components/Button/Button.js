@@ -1,8 +1,8 @@
 import "./Button.scss";
 
-const Button = ({ isBlue, content }) => {
+const Button = ({ isBlue, content, type }) => {
   return (
-    <button className={`button ${isBlue ? "button--blue" : ""}`}>
+    <button type={type} className={`button ${isBlue ? "button--blue" : ""}`}>
       <div
         className={`button__inner-container ${
           isBlue ? "button__inner-container--blue" : ""
