@@ -1,0 +1,27 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.browse-recipes-page {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background-color: $off-white;
+  border: 1rem solid $light-blue;
+  padding: 10rem;
+  @include flex(column, flex-start);
+}
+
+.recipe-search {
+  width: 60vw;
+
+  &__input {
+    background-color: $off-white;
+    border: 0.5rem solid $light-blue;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    width: 60%;
+    @include box-shadow;
+    color: $dark-blue;
+    font-size: 1rem;
+    margin-right: 2rem;
+  }
+}
