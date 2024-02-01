@@ -10,7 +10,7 @@ const Landing = () => {
         <h4 className="create__description">
           Create or copy recipes with a simple and intuitive tool
         </h4>
-        <Link className="link">
+        <Link to="/create" className="link">
           <Button type="button" content="Create" isBlue={false} />
         </Link>
       </section>

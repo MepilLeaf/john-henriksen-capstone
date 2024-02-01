@@ -9,6 +9,7 @@
   height: 100vh;
   background-color: $off-white;
   @include flex(row, space-evenly);
+  padding-bottom: 10rem;
 }
 
 .create,
@@ -18,6 +19,7 @@
   border-radius: 1.25rem;
   @include box-shadow;
   width: 40rem;
+  height: 30rem;
   &__title {
     margin: 0;
     font-size: 3rem;
