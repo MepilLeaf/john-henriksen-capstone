@@ -1,0 +1,37 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.link {
+  text-decoration: none;
+}
+
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: $off-white;
+  @include flex(row, space-evenly);
+}
+
+.create,
+.browse {
+  color: $off-white;
+  padding: 5rem;
+  border-radius: 1.25rem;
+  @include box-shadow;
+  width: 40rem;
+  &__title {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  &__description {
+    font-size: 2rem;
+  }
+}
+
+.create {
+  background-color: $light-red;
+}
+
+.browse {
+  background-color: $light-blue;
+}
