@@ -38,7 +38,15 @@ function App() {
               </>
             }
           />
-          <Route path="/browse/:id" element={<BrowseRecipes />} />
+          <Route
+            path="/browse/:id"
+            element={
+              <>
+                <Nav borderColor="blue" />
+                <BrowseRecipes />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
