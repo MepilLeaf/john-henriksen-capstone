@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/create" element={<CreateRecipe />} />
           <Route path="/browse" element={<BrowseRecipes />} />
+          <Route path="/browse/:id" element={<BrowseRecipes />} />
         </Routes>
       </BrowserRouter>
     </div>

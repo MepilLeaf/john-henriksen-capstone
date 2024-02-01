@@ -1,0 +1,42 @@
+@use "../../styles/partials/globals.scss" as *;
+
+.recipe-card {
+  border-radius: 1.25rem;
+  background-color: $dark-blue;
+  padding: 1rem;
+  width: 20rem;
+  @include box-shadow;
+  margin: 1rem 0;
+
+  &:hover {
+    padding: 0;
+  }
+
+  &__inner-container {
+    border-radius: 1.25rem;
+    background-color: $light-blue;
+    padding: 1rem;
+    @include box-shadow;
+    height: 10rem;
+    @include flex(column);
+
+    &:hover {
+      padding: 2rem;
+      height: 12rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $off-white;
+    word-wrap: break-word;
+    white-space: normal;
+    margin: 0;
+  }
+}
+
+.search-results {
+  margin-top: 3rem;
+  @include flex(row, space-evenly, flex-start, wrap);
+  width: 80vw;
+}

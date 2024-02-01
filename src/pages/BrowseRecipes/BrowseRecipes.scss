@@ -21,7 +21,12 @@
     width: 60%;
     @include box-shadow;
     color: $dark-blue;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-right: 2rem;
+    outline: none;
   }
+}
+
+.link {
+  text-decoration: none;
 }

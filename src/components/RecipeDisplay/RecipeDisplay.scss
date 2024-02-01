@@ -57,6 +57,7 @@
 
     &--browser {
       color: $dark-blue;
+      border: 0.5rem solid $dark-blue;
     }
   }
 
@@ -84,7 +85,10 @@
   &__recipe-section-content {
     text-align: left;
     font-weight: bold;
+    word-wrap: break-word;
+    white-space: pre-wrap;
     font-size: 1.5rem;
+    width: 100%;
   }
 
   &__recipe-tags {
