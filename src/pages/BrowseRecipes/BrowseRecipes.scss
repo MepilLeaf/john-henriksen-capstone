@@ -8,6 +8,7 @@
   border: 1rem solid $light-blue;
   padding: 10rem;
   @include flex(column, flex-start);
+  border-top: none;
 }
 
 .recipe-search {
