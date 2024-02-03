@@ -18,6 +18,10 @@
     background-color: $light-blue;
   }
 
+  &__buttons-container {
+    @include flex(column, space-between);
+  }
+
   &__back,
   &__submit {
     align-self: flex-start;
@@ -40,8 +44,26 @@
     }
   }
 
-  &__submit {
+  &__submit,
+  &__download {
     align-self: center;
+  }
+
+  &__download {
+    background-color: $off-white;
+    border: none;
+    border-radius: 1.25rem;
+    @include box-shadow;
+    padding: 0.5rem 1rem;
+    margin-top: 20%;
+
+    &:hover {
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__download-image {
+    width: 4rem;
   }
 
   &__recipe {
@@ -52,7 +74,7 @@
     color: $dark-red;
     @include flex(column);
     padding: 2rem 5rem;
-    @include box-shadow;
+
     border: 0.5rem solid $dark-red;
 
     &--browser {
