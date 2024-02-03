@@ -95,10 +95,10 @@ const CreateRecipes = () => {
             value={values.tags}
           />
           <p className="recipe-form__tags-footnote">
-            *you must separate tags with a comma:
+            *tags must be one word and separated by commas:
           </p>
           <p className="recipe-form__tags-footnote">
-            sweet, savory, 30 minutes, vegetarian
+            sweet, savory, dinner, vegetarian
           </p>
         </div>
         <Button type="submit" isBlue={false} content="Done" />
