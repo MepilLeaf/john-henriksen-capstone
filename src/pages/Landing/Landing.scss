@@ -8,8 +8,23 @@
   width: 100vw;
   height: 100vh;
   background-color: $off-white;
-  @include flex(row, space-evenly);
   padding-bottom: 10rem;
+
+  &__content-container {
+    @include flex(row, space-evenly);
+    margin-top: 5rem;
+  }
+
+  &__logo {
+    margin: 0;
+    padding-top: 3rem;
+    font-size: 6rem;
+    color: $light-blue;
+
+    &--red {
+      color: $light-red;
+    }
+  }
 }
 
 .create,
